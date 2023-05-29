@@ -37,6 +37,8 @@
             this.btnMedico = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEspecial = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.brnReiniciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +49,7 @@
             this.cboEspecialidad.Name = "cboEspecialidad";
             this.cboEspecialidad.Size = new System.Drawing.Size(136, 21);
             this.cboEspecialidad.TabIndex = 0;
+            this.cboEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cboEspecialidad_SelectedIndexChanged);
             // 
             // lblEspecialidad
             // 
@@ -66,6 +69,7 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvInformacion
             // 
@@ -106,6 +110,7 @@
             this.btnMedico.TabIndex = 10;
             this.btnMedico.Text = "Nuevo Médico";
             this.btnMedico.UseVisualStyleBackColor = false;
+            this.btnMedico.Click += new System.EventHandler(this.btnMedico_Click);
             // 
             // btnSalir
             // 
@@ -130,13 +135,42 @@
             this.btnEspecial.TabIndex = 8;
             this.btnEspecial.Text = "Nueva Especialidad";
             this.btnEspecial.UseVisualStyleBackColor = false;
+            this.btnEspecial.Click += new System.EventHandler(this.btnEspecial_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.AccessibleName = "";
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnLimpiar.Location = new System.Drawing.Point(305, 197);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 21);
+            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // brnReiniciar
+            // 
+            this.brnReiniciar.AccessibleName = "";
+            this.brnReiniciar.BackColor = System.Drawing.SystemColors.Control;
+            this.brnReiniciar.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.brnReiniciar.Location = new System.Drawing.Point(305, 170);
+            this.brnReiniciar.Name = "brnReiniciar";
+            this.brnReiniciar.Size = new System.Drawing.Size(75, 21);
+            this.brnReiniciar.TabIndex = 12;
+            this.brnReiniciar.Text = "Reiniciar";
+            this.brnReiniciar.UseVisualStyleBackColor = false;
+            this.brnReiniciar.Click += new System.EventHandler(this.brnReiniciar_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(324, 309);
+            this.ClientSize = new System.Drawing.Size(392, 309);
+            this.Controls.Add(this.brnReiniciar);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnMedico);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEspecial);
@@ -148,6 +182,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinica - Consulta";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,6 +200,8 @@
         private System.Windows.Forms.Button btnMedico;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEspecial;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button brnReiniciar;
     }
 }
 

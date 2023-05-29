@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIdent = new System.Windows.Forms.TextBox();
-            this.lblNumeroIden = new System.Windows.Forms.Label();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -38,24 +37,17 @@
             this.lblNumeroMat = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblMedico = new System.Windows.Forms.Label();
+            this.cboEspecialidad = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // txtIdent
+            // lblEspecialidad
             // 
-            this.txtIdent.Location = new System.Drawing.Point(130, 152);
-            this.txtIdent.MaxLength = 10;
-            this.txtIdent.Name = "txtIdent";
-            this.txtIdent.Size = new System.Drawing.Size(100, 20);
-            this.txtIdent.TabIndex = 27;
-            // 
-            // lblNumeroIden
-            // 
-            this.lblNumeroIden.AutoSize = true;
-            this.lblNumeroIden.Location = new System.Drawing.Point(22, 155);
-            this.lblNumeroIden.Name = "lblNumeroIden";
-            this.lblNumeroIden.Size = new System.Drawing.Size(90, 13);
-            this.lblNumeroIden.TabIndex = 26;
-            this.lblNumeroIden.Text = "Nro Identificacion";
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Location = new System.Drawing.Point(22, 155);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(67, 13);
+            this.lblEspecialidad.TabIndex = 26;
+            this.lblEspecialidad.Text = "Especialidad";
             // 
             // btnSalir
             // 
@@ -67,6 +59,7 @@
             this.btnSalir.TabIndex = 25;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -89,6 +82,7 @@
             this.btnRegistrar.TabIndex = 23;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtMatricula
             // 
@@ -134,14 +128,27 @@
             this.lblMedico.Text = "Nuevo Medico";
             this.lblMedico.Click += new System.EventHandler(this.label1_Click);
             // 
+            // cboEspecialidad
+            // 
+            this.cboEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEspecialidad.FormattingEnabled = true;
+            this.cboEspecialidad.Items.AddRange(new object[] {
+            "Medico Clinico",
+            "Pediatra",
+            "Cirujano"});
+            this.cboEspecialidad.Location = new System.Drawing.Point(130, 155);
+            this.cboEspecialidad.Name = "cboEspecialidad";
+            this.cboEspecialidad.Size = new System.Drawing.Size(100, 21);
+            this.cboEspecialidad.TabIndex = 27;
+            // 
             // frmMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(367, 233);
-            this.Controls.Add(this.txtIdent);
-            this.Controls.Add(this.lblNumeroIden);
+            this.Controls.Add(this.cboEspecialidad);
+            this.Controls.Add(this.lblEspecialidad);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistrar);
@@ -154,15 +161,14 @@
             this.Name = "frmMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinica - Nuevo Médico";
+            this.Load += new System.EventHandler(this.frmMedico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtIdent;
-        private System.Windows.Forms.Label lblNumeroIden;
+        private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegistrar;
@@ -171,5 +177,6 @@
         private System.Windows.Forms.Label lblNumeroMat;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblMedico;
+        private System.Windows.Forms.ComboBox cboEspecialidad;
     }
 }

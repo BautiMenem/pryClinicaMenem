@@ -48,6 +48,7 @@
             this.btnSalir.TabIndex = 15;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -70,6 +71,7 @@
             this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtIdent
             // 
@@ -132,6 +134,7 @@
             this.Name = "frmEspecialida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clinica - Nueva Especialidad";
+            this.Load += new System.EventHandler(this.frmEspecialida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
